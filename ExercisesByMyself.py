@@ -323,3 +323,138 @@ myDict["country"]="Austria and United States"
 
 print(myDict)
 """
+###16TUPLES
+#E1
+"""
+my_tuple = (1, 2, 3, 2, 3, 1, 3, 2, 3, 3, 3, 1, 3, 2, 2, 1, 3, 2)
+counter = my_tuple.count(2)
+print(counter)
+"""
+#E2
+"""
+my_tuple = (1, 2, 3, 2, 3, 1, 3, 2)
+myList = list(my_tuple)
+print(myList)
+"""
+#E3
+"""
+my_tuple=(1,2,3,4)
+a=my_tuple[0]
+b=my_tuple[1]
+c=my_tuple[2]
+d=my_tuple[3]
+
+list = [a,b,c,d]
+print(list)
+"""
+###17SETS
+#E1
+"""
+set1={1,2,'three','four'}
+set2={'three',4,5}
+set3= set1.union(set2)
+print(set3)
+"""
+#E2
+"""
+raffle = {"Camila", "Margarita", "Axel", "George", "Michael", "Monica"}
+randElement = raffle.pop()
+print(randElement)
+"""
+#E3
+"""
+raffle = {"Camila", "Margarita", "Axel", "George", "Michael", "Monica"}
+raffle.add("Damian")
+print(raffle)
+"""
+###18BOOLEANS
+#E1
+"""
+test=3>1
+print(test)
+"""
+#E2
+"""
+res=17834/34 > 87*56
+print(res)
+"""
+#E3
+"""
+sqrt = False
+if (25**0.5==5):
+    sqrt = True
+print(sqrt)
+"""
+###19COMPARISONOPERATORS
+#E1
+"""
+num1=36
+num2=17
+bool=(num1 >= num2)
+print(bool)
+"""
+#E2
+"""
+num1=(25**0.5)
+num2=(5)
+bool=(num1==num2)
+print(bool)
+"""
+#E3
+"""
+num1=64*3
+num2=24*8
+bool=(num1!=num2)
+print(bool)
+"""
+###20BOOLEAN LOGICAL OPERATORS
+#E1
+"""
+num1=36
+num2=72/2
+num3=48
+bool=(num1>num2) and (num1<num3)
+print(bool)
+"""
+#E2
+"""
+num1=36
+num2=72/2
+num3=48
+bool=(num1>num2) or (num1<num3)
+print(bool)
+"""
+#E3
+"""
+word1="success"
+word2="technology"
+sentence="When something is important enough, you do it even if the odds are not with you"
+
+a = sentence.__contains__(word1)
+b = sentence.__contains__(word2)
+
+res = bool(~(a or b))
+
+print(res)
+"""
+###21FLOWCONTROL
+#E1
+
+num1=input("Enter the number 1:\n")
+num2=input("Enter the number 2:\n")
+
+print(f"The written numbers was {num1} as the \nfirst one and {num2} as the second one.\n")
+print("")
+statement1=(num1>num2)
+statement2=(num2>num1)
+statement3=(num1==num2)
+
+if statement1 == True:
+    print(f"The number 1: {num1} is greater than the number 2: {num2}")
+elif statement2 == True:
+    print(f"The number 2: {num2} is greater than the number 1: {num1}")
+elif statement3 == True:
+    print(f"The number 1: {num1} is EQUAL than the number 2: {num2}")
+else:
+    print(f"Any case detected\nNumber 1:{num1}\nNumber 2:{num2}")
+    
