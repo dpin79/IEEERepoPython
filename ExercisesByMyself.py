@@ -439,7 +439,7 @@ print(res)
 """
 ###21FLOWCONTROL
 #E1
-
+"""
 num1=input("Enter the number 1:\n")
 num2=input("Enter the number 2:\n")
 
@@ -457,4 +457,216 @@ elif statement3 == True:
     print(f"The number 1: {num1} is EQUAL than the number 2: {num2}")
 else:
     print(f"Any case detected\nNumber 1:{num1}\nNumber 2:{num2}")
-    
+"""
+
+#E2
+
+"""
+age=int(input("Enter your current age:\n"))
+ans=input("Do you have driver license?(Y/N):\n")
+if ans == "Y":
+    license = True
+elif ans == "N":
+    license = False
+print("")
+
+print(f"Age:{age}\nDriver license:{license}\n")
+print("")
+
+ageRestrict=(age >= 18)
+
+if (ageRestrict == True) and (license == True):
+    print(f"You can drive!!!")
+elif ageRestrict == False:
+    print(f"You can't drive yet. You must be 18 years old and have a license")
+elif (ageRestrict == True) and (license == False):
+    print(f"You can't drive. You need to have a license")
+else:
+    print(f"Any case detected\nAge:{age}\nState of driver license:{license}")
+"""
+
+#E3
+"""
+python=(input("Do you know Python(Y/N):\n"))
+eng=input("Do you know english?(Y/N):\n")
+
+if python == "Y":
+    python = True
+elif python == "N":
+    python = False
+else:
+    python = None
+
+if eng == "Y":
+    eng = True
+elif eng == "N":
+    eng = False
+else:
+    eng = None
+print("")
+
+print(f"Python:{python}\nEnglish:{eng}\n")
+print("")
+
+
+
+if (python == True) and (eng == True):
+    print(f"You meet the requirements to apply")
+elif (python == False) and (eng == False):
+    print(f"To apply, you need to know how to program in Python and have knowledge of English")
+elif (python == True) and (eng == False):
+    print(f"To apply, you need to have knowledge of English")
+elif (python == False) and (eng == True):
+    print(f"To apply, you need to know how to program in Python")
+else:
+    print(f"Any case detected\nPython knowledge:{python}\nEnglish knowledge:{eng}")
+"""
+###22LOOPFOR
+#E1
+"""
+students_class = ["María", "José", "Carlos", "Martina", "Isabel", "Tomás",
+"Daniela"]
+
+for i in students_class:
+    print("Hello " + i)
+"""
+#E2
+"""
+list_numbers = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]
+sum = 0
+for i in list_numbers:
+    sum += i
+print(sum)
+"""
+#E3
+"""
+numbers_list = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]
+
+sumOdd = 0
+sumEven = 0
+
+for i in numbers_list:
+    if i%2==0:
+        sumEven += i
+    else:
+        sumOdd += i
+print(f"The sum of odd numbers is:{sumOdd}\nThe sum of even numbers is:{sumEven}")
+"""
+
+###23LOOPWHILE
+#E1
+"""
+num = 10
+
+while num >= 0:
+    print(num)
+    num -=1
+"""
+#E2
+"""
+num = 50
+
+while num >= 0:
+    if num%5 == 0:
+        print(num)
+    num-=1
+"""
+#E3
+"""
+numbers_list = [4,5,8,7,6,9,8,2,4,5,7,1,9,5,6,-1,-5,6,-6,-4,-3]
+for i in numbers_list:
+    if i <0:
+        print(f"For the number {i} the program will be interrupt")
+        break
+    else:
+        continue
+"""
+
+###24RANGE
+#E1
+
+"""
+myList = list(range(2500,2586))
+print(myList)
+"""
+
+#E2
+"""
+myList= list(range(3,301,3))
+print(myList)
+"""
+#E3
+"""
+sumCuadrados=0
+for i in range(1,16):
+    sumCuadrados+=i**2
+print(sumCuadrados)
+"""
+###25ENUMERATE
+#E1
+"""
+list_names = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta",
+"Darío", "Emiliano", "Melisa"]
+
+for i in range(0,len(list_names)):
+    name = list_names[i]
+    index = i
+    print(f"{name} is found at index {index}")
+"""
+#E2
+"""
+indexList=[]
+str="Python"
+for i in range(0,len(str)):
+    indexList.append((i,str[i]))
+print(indexList)
+"""
+#E3
+"""
+names_list = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta",
+"Darío", "Emiliano", "Melisa"]
+
+for i in names_list:
+    if i[0] == "M":
+        print(i)
+    else:
+        continue
+"""
+###26ZIP
+#E1
+"""
+capitals = ["Berlin", "Tokyo", "Paris", "Helsinki", "Ottawa", "Canberra"]
+countries = ["Germany", "Japan", "France", "Finland", "Canada", "Australia"]
+
+zipTuple = tuple(zip(capitals,countries))
+
+for i in zipTuple:
+    capital=i[0]
+    country=i[1]
+    print(f"The capital of {country} is {capital}")
+"""
+#E2
+"""
+brands=['Samsung','Nothing','Acer','McDonalds']
+products=['Tv','Phone','Laptop','Fast food']
+
+zipTst = (zip(brands,products))
+
+print(zipTst)
+"""
+#E3
+"""
+Spanish=["uno","dos","tres","cuatro","cinco"]
+Portuguese=["um","dois","três","quatro","cinco"]
+English=["one","two","three","four","five"]
+
+numbLst=list(zip(Spanish,Portuguese,English))
+
+print(numbLst)
+"""
+###27MIN&MAX
+#E1
+
+#
+
+
