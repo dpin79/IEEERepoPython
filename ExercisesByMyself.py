@@ -1,3 +1,5 @@
+import random
+
 ###1PRINT STATEMENTS
 #EXERCISE 1
 
@@ -666,7 +668,103 @@ print(numbLst)
 """
 ###27MIN&MAX
 #E1
+"""
+list_numbers = [44542247/2, 21310/5, 2134747*33, 44556475, 121676, 6654067,
+353254, 123134, 55**12, 611**5]
+maxValue = max(list_numbers)
+print(maxValue)
+"""
+#E2
+"""
+list_numbers = [44542247, 21310, 2134747, 44556475, 121676, 6654067, 353254,
+123134, 552512, 611665]
 
-#
+maxVal=max(list_numbers)
+minVal=min(list_numbers)
 
+diff=maxVal-minVal
+print(diff)
+"""
 
+#E3
+"""
+ages_dictionary = {"Carlos":55, "María":42, "Mabel":78, "José":44,
+"Lucas":24, "Rocío":35, "Sebastián":19, "Catalina":2 ,"Dario":49}
+
+agesLst=ages_dictionary.values()
+namesLst=ages_dictionary.keys()
+
+minAge=min(agesLst)
+maxName=max(namesLst)
+print(f"The minAge is: {minAge}\nThe last name is: {maxName}")
+"""
+
+###28RANDOM
+#E1
+
+"""
+random=random.randint(1,10)     #2 LIMITS TO WORK
+print(random)
+"""
+#E2
+"""
+random=random.random()      #NO LIMITS TO WORK
+print(random)
+"""
+#E3
+"""
+names = ["Carlos", "Julia", "Nicole", "Laura", "Mailen"]
+random = random.choice(names)
+print(random)
+"""
+###29LISTSCOPREHENSION
+#E1
+"""
+values = [1, 2, 3, 4, 5, 6, 9.5]
+valuesPow=[]
+for i in values:
+    valuesPow.append(i**2)
+print(valuesPow)
+"""
+#E2
+"""
+values = [1, 2, 3, 4, 5, 6, 9.5]
+valuesEven=[]
+for i in values:
+    if i%2==0:
+        valuesEven.append(i)
+    else:
+        continue
+print(valuesEven)
+"""
+#E3
+"""
+temperature_fahrenheit = [32, 212, 275]
+degrees_celcius=[]
+for F in temperature_fahrenheit:
+    C = (F - 32) * (5/9)
+    degrees_celcius.append(C)
+print(degrees_celcius)
+"""
+###30METHODS&HELP
+#E1
+"""
+txt=",:_#,,,,,,:::____##Pyt%on_ _Total,,,,,,::#"
+tst= txt.lstrip(",:%_#")
+print(tst)
+"""
+#E2
+"""
+fruits = ["mango", "banana", "cherry", "plum", "grapefruit"]
+fruits.insert(3, "orange")      #index to be insert, stuff to insert
+print(fruits)
+"""
+#E3
+"""
+smartphone_brands = {"Samsung", "Xiaomi", "Apple", "Huawei", "LG"}
+tv_brands = {"Sony", "Philips", "Samsung", "LG"}
+
+isolatedSets=smartphone_brands.isdisjoint(tv_brands)
+print(isolatedSets)
+#NOTE: TWO SETS ARE DISJOINT WHEN HAVE NULL ELEMENTS IN COMMON
+"""
