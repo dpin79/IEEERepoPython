@@ -1,4 +1,5 @@
 import random
+from random import choice
 
 ###1PRINT STATEMENTS
 #EXERCISE 1
@@ -768,3 +769,137 @@ isolatedSets=smartphone_brands.isdisjoint(tv_brands)
 print(isolatedSets)
 #NOTE: TWO SETS ARE DISJOINT WHEN HAVE NULL ELEMENTS IN COMMON
 """
+
+###31FUNCTIONS
+#E1
+"""
+def greet():
+    print("Hello World!")
+"""
+#E2
+"""
+def welcome(name:str):
+    print(f"Welcome {name}")
+"""
+#E3
+"""
+def square(numb:int):
+    print(f"The square of {numb} is {numb**2}")
+"""
+###32RETURN
+#E1
+"""
+def power(base:int,exp:int):
+    ans=base**exp
+    return ans
+"""
+#E2
+"""
+def usdToEur(usd:int):
+    eur= usd*0.90
+    return eur
+"""
+#E3
+"""
+def reverseWord(word:str):
+    reverse=word[::-1]
+    up=reverse.upper()
+    return up
+
+#print(reverseWord("Python"))
+"""
+###33DYNAMICFUNCT
+#E1
+"""
+def allPositives(values:list):
+    ans=True
+    for i in values:
+        if i < 0:
+            ans=False
+            break
+    return ans
+
+#tst=[1,5,89,4,2,87,3,4,-1]
+#tst1=[1,5,89,4,2,87,3,4,1]
+#print(allPositives(tst1))
+"""
+#E2
+"""
+def sumMinors(numbList:list):
+    sum=0
+    for i in numbList:
+        if i > 0 and i < 1000:
+            sum+=i
+    return sum
+
+#numbers_list = [1, 50, 500, 5000, 750]
+
+#print(sumMinors(numbers_list))
+"""
+#E3
+"""
+def evenCount(numbList:list):
+    counter=0
+    for i in numbList:
+        if i % 2 == 0:
+            counter+=1
+        else:
+            continue
+    return counter
+#numbers_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,19, 20]
+#print(evenCount(numbers_list))
+"""
+###34FUNCTIONSINTERACTIONS
+#E1
+"""
+numbers = [1, 2, 3, 4, 5, 6 ]
+
+def rollDice():
+    fInt=choice(numbers)
+    sInt=choice(numbers)
+    return fInt,sInt
+def evalMove(fInt:int,sInt:int):
+    sum = fInt+sInt
+    if sum <=6:
+        print(f"The sum of your dice is {sum}.Sorry.")
+    elif sum > 6 and sum < 10:
+        print(f"The sum of your dice is {sum}. You have a good chance.")
+    elif sum >=10:
+        print(f"The sum of your dice is {sum}. It looks like a winning move.")
+"""
+#E2
+"""
+def reduceList(numbList:list):
+    sortedList=numbList.sort()
+    sortedList.pop()
+    filterList=list(tuple(sortedList))
+    return filterList
+def average(filterList:list):
+    sum=0
+    numElements=len(filterList)
+    for i in filterList:
+        sum+=i
+    ans=sum/numElements
+    return ans
+"""
+#E3
+"""
+def tossCoin():
+    res=random.choice(["Face","Cross"])
+    return res
+numbList = [1,2,3,4]
+def testLuck(res:str,numbList:list):
+    if res == "Face":
+        numbList=[]
+        print("The list will self-destruct")
+        print(f"The numbList:{numbList}")
+    elif res == "Cross":
+        print("The list was saved")
+        print(f"The numbList:{numbList}")
+#print(testLuck(tossCoin(),numbList))
+"""
+
+
+
+
+
