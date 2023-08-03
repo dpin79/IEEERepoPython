@@ -1008,8 +1008,8 @@ file.close()
 f=open("tstfile.txt", "r")
 print(f.read())
 """
-#E2
-
+#E2 & E3
+"""
 file = open("file2.txt","w")
 for i in range(1,11):
     file.writelines(f"This is the {i} line\n")
@@ -1026,6 +1026,72 @@ for line in lines:
         print(f"The first line is: {line.strip()}")
     elif counter == 2:
         print(f"The second line is: {line.strip()}")
+"""
+
+###38CREATE&WRITEFILES
+#E1
+"""
+file = open("myFile.txt","w")
+file.write("New text")
+file.close()
+
+file = open("myFile.txt","r")
+print(file.read())
+"""
+#E2
+"""
+file = open("myFile.txt","a")
+file.write("New login")
+file.close()
+
+file=open("myFile.txt","r")
+print(file.read())
+"""
+#E3
+"""
+record_last_session = ["Federico", "20/12/2021", "08:17:32 hs",
+"No loading errors"]
+file=open("log.txt","w")
+for each in record_last_session:
+    file.writelines(each+"\t")
+file.close()
+
+file=open("log.txt","r")
+print(file.read())
+"""
+
+###39PATH
+#E1
+
+from pathlib import Path
+"""
+basePath=Path.home()
+
+print(basePath)
+"""
+#E2
+"""
+path = Path("PythonCourse","Day 6","path_practices.py")
+print(path)
+"""
+#E3
+"""
+home = Path.home()
+fPath = Path(home,"PythonCourse","Day 6","path_practices.py")
+
+print(fPath)
+"""
+###40FILES&FUNCTIONS
+#E1
+
+#strt
+
+
+
+
+
+
+
 
 
 
