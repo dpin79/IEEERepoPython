@@ -898,6 +898,138 @@ def testLuck(res:str,numbList:list):
         print(f"The numbList:{numbList}")
 #print(testLuck(tossCoin(),numbList))
 """
+###UNDEFINEDARGS
+#E1
+"""
+def sumSquares(str):
+    sum = 0
+    print(f"The chain that was written is: {str}")
+    for i in str:
+        try:
+
+            num = int(i)
+            if int(i) / 1 == int(i):
+                x = True
+            else:
+                x = None
+            if x == True:
+                sum += (num*num)
+
+        except:
+            continue
+    if sum==0:
+        ans=print(f"No se han encontrado numeros")
+    else:
+        ans=print(f"La suma de los cuadrados encontrados es de:{sum}")
+    return ans
+#print(sumSquares("1,2,3"))
+"""
+
+#E2
+"""
+def sumAbs(*args):
+    sum=0
+
+    for arg in args:
+        if arg < 0:
+            arg *= -1
+            sum += arg
+        else:
+            sum+=arg
+    return sum
+"""
+#E3
+"""
+def personNumb(name,*numbers):
+    sum=0
+    for numb in numbers:
+        try:
+            sum+=int(numb)
+        except:
+            continue
+    print(f"{name}, the sum of your numbers is {sum}")
+"""    
+###36UNDEFINEDARG(KWARGS)
+#E1
+
+"""
+#(*args)
+
+def countParameters1(*args):
+    sum = print(f"The numbers of parameters are: {len(args)}")
+    return sum
+
+#print(countParameters1(2,2,4,"asd",[4,5,8]))
+
+#(**kwargs)
+
+def countParameters2(**kwargs):
+    sum=0
+    for key,value in kwargs.items():
+        sum+=1
+    ans = print(f"The number of items insert in the parameters function is: {sum}")
+    return ans
+
+#print(countParameters2(key1=14,key2=15))
+"""
+
+#E2
+#NOTE: The dictionaries methods can be use with **kwargs
+"""
+def listAttributes(**kwargs):
+    lst=kwargs.values()
+    ans = print(f"The list with all the values is: {lst}")
+    return ans
+#print(listAttributes(key1=14,key2=15))
+"""
+
+#E3
+"""
+def describePerson(name,**kwargs):
+    print(f"Characteristics of: {name}\n")
+    lst = kwargs.items()
+    for each in lst:
+
+        print(f"{each[0]} : {each[1]}")
+    print("")
+
+#describePerson("Mary", eye_color="blue", hair_color="blonde")
+"""
+
+###37OPEN&MANIPULATEFILES
+#E1
+"""
+file = open("tstfile.txt", "w")
+#w -> write in the file but overwritting
+#a -> write in the end of the existing file
+file.write("Test text in the file")
+file.close()
+
+f=open("tstfile.txt", "r")
+print(f.read())
+"""
+#E2
+
+file = open("file2.txt","w")
+for i in range(1,11):
+    file.writelines(f"This is the {i} line\n")
+file.close
+
+file = open("file2.txt","r")
+lines= file.readlines()
+
+counter=0
+for line in lines:
+    counter+=1
+    #print(f"This is the line{counter} and the content is: {line.strip()}")
+    if counter == 1:
+        print(f"The first line is: {line.strip()}")
+    elif counter == 2:
+        print(f"The second line is: {line.strip()}")
+
+
+
+
 
 
 
