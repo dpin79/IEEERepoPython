@@ -1084,7 +1084,11 @@ print(fPath)
 ###40FILES&FUNCTIONS
 #E1
 
-#strt
+def openRead(file):
+    fl=open(file,"r")
+    ans=print(fl.read())
+    return ans
+
 
 
 
