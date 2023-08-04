@@ -1083,11 +1083,95 @@ print(fPath)
 """
 ###40FILES&FUNCTIONS
 #E1
-
+#NOTE: Not is necessary  to print before the return
+"""
 def openRead(file):
     fl=open(file,"r")
-    ans=print(fl.read())
+    ans=fl.read()
     return ans
+"""
+#E2
+"""
+def overWrite(file):
+    fl=open(file,"w")
+    return fl.write("Content deleted")
+"""    
+
+#E3
+"""
+def errorLog(file):
+    fl=open(file,"a")
+    ans=fl.write("an execution error has been logged")
+    return ans
+    fl.close()
+"""    
+
+###41CLASSES
+#E1
+"""
+class Character:
+    pass
+
+ironman = Character()
+"""
+
+#E2
+"""
+class Dinosaur:
+    pass
+
+velociraptor=Dinosaur()
+tyrannosaurus_rex=Dinosaur()
+brachiosaurus=Dinosaur()
+"""
+#E3
+"""
+class StreamingPlatform:
+    pass 
+
+netflix = StreamingPlatform()
+hbo_max = StreamingPlatform()
+amazon_prime_video = StreamingPlatform()
+"""
+
+###42ATRIBUTES
+#E1
+"""
+class House:
+    def __init__(self,color,numberFloors):
+        self.color = color
+        self.numberFloors = numberFloors
+    def printFunct(self):
+        print(f"The color is: {self.color}\nThe number of floors: {self.numberFloors}")
+tstHouse = House("White",4)
+tstHouse.printFunct()
+"""
+#E2
+"""
+class Cube:
+    def __init__(self,color):
+        self.faces = 6
+        self.color = color
+    def __str__(self):
+        return f"Faces: {self.faces}\nColor: {self.color}"
+redCube = Cube('red')
+print(redCube)      #USE the __str__ function to print
+"""
+#E3
+"""
+class Character:
+    real=False
+    def __init__(self,species,inventor,age) -> None:
+        self.species = species
+        self.inventor = inventor
+        self.age = age
+    def __str__(self) -> str:
+        return f"species:{self.species}\ninventor:{self.inventor}\nage:{self.age}"
+ironman = Character("Human",True,53)
+print(ironman)
+"""
+
+
 
 
 
