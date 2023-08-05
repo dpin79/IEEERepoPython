@@ -1332,8 +1332,77 @@ class Son(Father):
 
 ###47POLYMORPHISM
 #E1
+"""
+word = "jellyfish"
+list = ["constitution","medical","livingroom"]
+tuple = (1,2,3,67)
 
-#str
+for i in word:
+    wordLen = len(word)
+
+print(wordLen)
+
+for i in list:
+    listLen = len(list)
+
+print(listLen)
+
+for i in tuple:
+    tupleLen = len(tuple)
+
+print(tupleLen)
+"""
+
+#E2
+"""
+class Inventor():
+    def innovate(self):
+        print("Invent")
+
+class Researcher():
+    def innovate(self):
+        print("Research")
+
+class Scientist():
+    def innovate(self):
+        print("Science")
+
+Tesla = Inventor()
+MarieCurie= Researcher()
+Einstein = Scientist()
+
+characters = [Tesla,MarieCurie,Einstein]
+
+for character in characters:
+    character.innovate()
+
+print(character)
+"""
+
+#E3
+"""
+class Defender():
+    def defend(self):
+        print("Mark and sweep")
+
+class Goalkeeper():
+    def defend(self):
+        print("Watch out the goal")
+
+class Midfielder():
+    def defend(self):
+        print("Back off and block attacks")
+
+Ramos = Defender()
+Ospina = Goalkeeper()
+Kroos = Midfielder()
+
+players = [Ramos,Ospina,Kroos]
+
+def characterDef(player):
+    player.defend()
+"""
+
 
 
 
