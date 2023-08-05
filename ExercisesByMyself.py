@@ -1171,9 +1171,169 @@ ironman = Character("Human",True,53)
 print(ironman)
 """
 
+###43METHODS
+#E1
+"""
+class Dog:
+    def bark(self):
+        print("Wow!")
+"""    
+#E2
+"""
+class Inventor:
+    def createInvent():
+        return f"Eureka"
 
+DaVinci = Inventor.createInvent()
 
+#print(DaVinci)
+"""
+#E3
+"""
+class Alarm:
+    def postoned(minutes):
+        return f"The alarm has been postponed {minutes} minutes"
 
+AlarmTst1 = Alarm.postoned(10)
+print(AlarmTst1)
+"""
+
+###44METHODTYPES
+#E1
+"""
+class Pet:
+
+    @staticmethod
+    def breathe():
+        return f"Inhale..Exhale"
+    
+#print("Every pet needs to: ", Pet.breathe())
+"""
+
+#E2
+"""
+class Player:
+    live = False
+    @classmethod
+    def revive(self):
+        self.live = True
+        return f"The actual state of the attribute live is: {Player.live}"
+
+    def __str__(self):
+        return f"State of live: {Player.live}"
+playerTest = Player()
+#print(playerTest)
+#print(playerTest.revive())
+"""
+#E3
+"""
+class Character:
+    def __init__(self, numbArrows):
+        self.numbArrows = numbArrows
+
+    def throwArrow(self):
+        self.numbArrows -= 1
+"""
+
+###45INHERITANCE
+#E1
+"""
+class Person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
+class Student(Person):
+    pass        #IF YOU DON´T NEED ADD ANYTHING
+"""
+#E2
+"""
+class Pet:
+    def __init__(self,age, name, numbPaws) -> None:
+        self.age = age
+        self.name=name
+        self.numbPaws=numbPaws
+
+class Dog(Pet):
+    def __init__(self,age,name,numbPaws):       #OTHER WAY TO INHERIT THE ATTRIBUTES BUT NO USING PASS
+        super.__init__(age,name,numbPaws)
+"""
+#E3
+"""
+class Vehicle:
+    def accelerate():
+        pass
+    def brake():
+        pass
+
+class Car(Vehicle):
+    pass        #THE EASIEST WAY, WHEN NOTHING ELSE IS ADDED
+"""
+
+###46EXTENDEDINHERITANCE
+#E1
+"""
+class Father:
+    def __init__ (self):
+        self.work = "Hospital"
+        self.laught = "Father´s Laught like -Hahaha!-"
+    
+class Mother:
+    def __init__(self):
+        self.work = "Investigator"
+
+class Daughter(Father,Mother):
+    pass
+"""
+#E2
+"""
+class Vertebrate:
+    vertebrate = True
+class Fish:
+    def layEggs(self):
+        return f"layEggs"
+    def swim(self):
+        return f"swim"
+
+class Reptile:
+    poisonous = True
+class Bird:
+    beak = True
+    def layEggs(self):
+        return f"layEggs"
+class Mammal:
+    def walk(self):
+        return f"CanWalk"
+    def nurse(self):
+        return f"CanNurse"
+
+class Platypus(Vertebrate,Fish,Reptile,Bird,Mammal):
+    pass
+"""
+
+#E3
+"""
+class Father():
+    eyeColor = "brown"
+    height = "high"
+    voice = "average"
+    sport = "soccer"
+    def laught(self):
+        return "Ha Ha Ha!"
+    def hobby(self):
+        return "Read books"
+    def carrer(self):
+        return "Engeneering"
+    
+class Son(Father):
+    def hobby(self):
+        return "I play videogames in my spare time"
+"""
+
+###47POLYMORPHISM
+#E1
+
+#str
 
 
 
