@@ -1403,8 +1403,148 @@ def characterDef(player):
     player.defend()
 """
 
+###48SPECIAL METHODS
+#E1
+"""
+class Book:
+
+    def __init__(self,title,author,numbPages):
+        self.title = title
+        self.author = author
+        self.numbPages = numbPages
+        
+    def __str__(self):
+        return f'"{self.title}", by {self.author}'
+"""
+#E2
+"""
+class Book:
+    def __init__ (self,title,author,numbPages):
+        self.title=title
+        self.author=author
+        self.numbPages = numbPages
+
+    def __len__(self):
+        return int(self.numbPages)
+"""
+
+#E3
+"""
+class Book:
+
+    def __init__(self,title,author,numbPages):
+        self.title=title
+        self.author=author
+        self.numbPages=numbPages
+
+    def __del__(self):
+        return f"Book deleted"
+"""    
 
 
+###49ERRORHANDING
+#E1
+"""
+def sum(numb1,numb2):
+    try:
+        ans = numb1 + numb2
+        return f"The result is: {ans}"
+    except:
+        return f"Unexpected error"
+"""    
+
+#E2
+"""
+def div(numb1,numb2):
+    try:
+        ans = numb1 / numb2
+        ans = round(ans,2)
+        return f"The result is: {ans}"
+    
+    except TypeError:
+        return f"The arguments to be entered must be numbers"
+    
+    except ZeroDivisionError:
+        return f"The second argument must not be zero"
+"""    
+#E3
+"""
+def openFile(file):
+    try:
+        f = open(file,"r")
+        print(f"File open in lecture mode and the CONTENT is:\n{f.read()}")
+        print("OPENING SUCCESSFULLY")
+    except FileNotFoundError:
+        return f"The file was not found"
+    else:
+        return f"Unknown error"
+    finally:
+        print("Finishing execution")
+"""
+#print(openFile("file2.txt"))
+#print("")
+#print(openFile("noExist.txt"))
+#print("")
+#print(openFile(2))
+#print("")
+
+###50GENERATORS
+#E1
+"""
+def generator():
+    ans = 0
+    while True:
+        ans+=1
+        print(f"El numero reservado es: {ans}")
+        yield ans
+    
+infgenerator = generator()
+#print(infgenerator)
+"""
+
+#E2
+"""
+def multipliesOfSev():
+    ans = 1
+    while True:
+        ans += 7
+        yield ans
+
+generator = multipliesOfSev()
+"""
+
+#E3
+"""
+#USUAL PROCEDURE
+def loseLife():
+    lifes = 3
+    print(f"The last lifes was: {lifes}")
+    while lifes != 0:
+        lifes-=1
+        yield f"You have {lifes} life left"
+    else:
+        return f"Game Over"
+    
+
+#YIELD PROCEDURE
+def loseLifes():
+    lifes= "You have 3 lifes"
+    yield lifes
+
+    lifes= "You have 2 lifes"
+    yield lifes
+
+    lifes= "You have 1 lifes"
+    yield lifes
+
+    lifes= "Game over"
+    yield lifes
+"""
+
+###51COLLECTIONS
+from collections import Counter
+
+#Aa...
 
 
 
