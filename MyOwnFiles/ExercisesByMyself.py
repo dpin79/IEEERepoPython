@@ -1542,9 +1542,35 @@ def loseLifes():
 """
 
 ###51COLLECTIONS
-from collections import Counter
+from collections import *
 
-#Aa...
+#E1
+"""
+list = [1, 2, 3, 6, 7, 1, 2, 4, 5, 5, 5, 5, 3, 2, 6, 7]
+
+cnt = Counter(list)     #Counter is a method from collections
+
+print(cnt)
+"""
+#E2
+"""
+myDict = defaultdict(lambda:"Value not found")
+myDict['age']=44
+
+print(myDict)
+"""
+#E3
+"""
+citiesList = deque(["London", "Berlin", "Paris", "Madrid", "Rome", "Moscow"])
+print(citiesList)
+"""
+
+###52 DATETIME
+from datetime import *
+#E1
+
+###
+
 
 
 
