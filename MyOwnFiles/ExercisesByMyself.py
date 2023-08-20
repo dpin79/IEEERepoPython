@@ -1568,16 +1568,55 @@ print(citiesList)
 ###52 DATETIME
 from datetime import *
 #E1
+"""
+inputDate = date(2003,1,1)
+
+#print(inputDate)
+"""
+#E2
+"""
+actualDate = date.today()
+
+#print(actualDate)
+"""
+#E3
+"""
+now = datetime.now()
+
+actualMinutes = now.strftime("%M")
+
+#print(f"Actual minutes: {actualMinutes}")
+
+otherOptionForMinutes = now.minute
+"""
+
+###53MATH
+import math
+
+#E1
+"""
+ans = math.log10(25)
+#print(round(ans,3))
+"""
+
+#E2
+"""
+piNumb = math.pi
+ans = math.sqrt(piNumb)
+#print(round(ans,3))
+"""
+
+#E3
+"""
+fact = math.factorial(7)
+print(fact)
+"""
+
+###54REGULAREXPRESSIONS
+import re
+#E1
 
 ###
-
-
-
-
-
-
-
-
 
 
 
